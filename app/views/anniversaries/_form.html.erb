@@ -1,0 +1,32 @@
+<%= form_with(model: anniversary, local: true) do |form| %>
+  <% if anniversary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(anniversary.errors.count, "error") %> prohibited this anniversary from being saved:</h2>
+
+      <ul>
+      <% anniversary.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :anniversary_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date, id: :anniversary_date ,:start_year => 1900 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :anniversary_description , :size => "50x3" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

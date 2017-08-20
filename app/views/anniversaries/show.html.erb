@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @anniversary.name %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @anniversary.date %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @anniversary.description %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @anniversary.year %>
+</p>
+
+<p>
+  <strong>Month:</strong>
+  <%= @anniversary.month %>
+</p>
+
+<p>
+  <strong>Day:</strong>
+  <%= @anniversary.day %>
+</p>
+
+<%= link_to 'Edit', edit_anniversary_path(@anniversary) %> |
+<%= link_to 'Back', anniversaries_path %>
