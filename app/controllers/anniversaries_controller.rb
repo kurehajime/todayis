@@ -12,6 +12,10 @@ class AnniversariesController < ApplicationController
   def show
   end
 
+  def today
+    @todayEvents = Anniversary.where(month: Date.today.month, day: Date.today.day)
+  end
+
   # GET /anniversaries/new
   def new
     @anniversary = Anniversary.new

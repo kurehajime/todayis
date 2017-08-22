@@ -1,0 +1,14 @@
+<div>
+<% if @todayEvents.count == 0 then %>
+今日は何でもない日
+<% else %>
+    <% @todayEvents.each do |event| %>
+
+<h1><%= link_to event.name, event  %></h1>
+
+    <% end %>
+<% end %>
+</div>
+<div>
+<%= link_to 'New Anniversary', new_anniversary_path ,class: "btn btn-lg btn-primary" %>
+</div>
